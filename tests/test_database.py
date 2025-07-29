@@ -46,7 +46,7 @@ async def test_create_prompt_and_response(db_session):
         conversation_id=conversation.id,
         content="Hello, how are you?",
         active_tools=["tool1", "tool2"],
-        metadata={"temperature": 0.7}
+        meta={"temperature": 0.7}
     )
     db_session.add(prompt)
     await db_session.commit()
@@ -57,7 +57,7 @@ async def test_create_prompt_and_response(db_session):
         content="I'm doing well, thank you!",
         model_provider="claude",
         model_name="claude-3-opus-20240229",
-        metadata={"tokens": 10}
+        meta={"tokens": 10}
     )
     db_session.add(response)
     await db_session.commit()

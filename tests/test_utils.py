@@ -78,7 +78,7 @@ def test_export_conversation_to_json():
             created_at=datetime(2024, 1, 1, 12, 0),
             content="Hello",
             active_tools=["tool1"],
-            metadata={}
+            meta={}
         )
     ]
     
@@ -91,7 +91,7 @@ def test_export_conversation_to_json():
                 content="Hi there!",
                 model_provider="openai",
                 model_name="gpt-4",
-                metadata={}
+                meta={}
             )
         ]
     }

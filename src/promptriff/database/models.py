@@ -50,7 +50,7 @@ class Prompt(Base):
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
     content: Mapped[str] = mapped_column(Text)
     active_tools: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON, nullable=True)
-    metadata: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON, nullable=True)
+    meta: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON, nullable=True)
     
     # Relationships
     conversation: Mapped["Conversation"] = relationship(
@@ -78,7 +78,7 @@ class Response(Base):
     content: Mapped[str] = mapped_column(Text)
     model_provider: Mapped[str] = mapped_column(String(50))
     model_name: Mapped[str] = mapped_column(String(100))
-    metadata: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON, nullable=True)
+    meta: Mapped[Optional[Dict[str, Any]]] = mapped_column(JSON, nullable=True)
     
     # Relationships
     prompt: Mapped["Prompt"] = relationship("Prompt", back_populates="responses")

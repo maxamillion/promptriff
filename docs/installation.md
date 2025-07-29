@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Python 3.9 or higher
+- Python 3.10 or higher
 - `uv` package manager (recommended) or `pip`
 - API keys for at least one AI provider (OpenAI, Claude, or Gemini)
 

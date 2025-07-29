@@ -57,7 +57,7 @@ TabPane {
 }
 
 .streaming {
-    border-style: dashed;
+    border: dashed $secondary;
 }
 
 /* Chat input */
@@ -197,7 +197,7 @@ TabPane {
 }
 
 .diff-line {
-    white-space: pre;
+    text-style: none;
 }
 
 .diff-add {

@@ -211,7 +211,7 @@ class MainScreen(Screen):
                 conversation_id=self.current_conversation.id,
                 content=content,
                 active_tools=self.enabled_tools,
-                metadata={}
+                meta={}
             )
             session.add(prompt)
             await session.commit()
@@ -233,7 +233,7 @@ class MainScreen(Screen):
                 content=content,
                 model_provider=self.current_provider,
                 model_name=self.current_model,
-                metadata={}
+                meta={}
             )
             session.add(response)
             await session.commit()

@@ -2,7 +2,7 @@
 
 > 🎸 Terminal-based AI prompt experimentation tool with MCP support
 
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 PromptRiff is a powerful terminal user interface for interacting with multiple AI language models (OpenAI, Claude, Gemini) with integrated Model Context Protocol (MCP) tool support. Test and compare prompts across different models, manage conversation history, and leverage MCP tools - all from your terminal.

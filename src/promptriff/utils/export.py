@@ -39,7 +39,7 @@ def export_conversation_to_json(
                 "created_at": prompt.created_at.isoformat(),
                 "content": prompt.content,
                 "active_tools": prompt.active_tools,
-                "metadata": prompt.metadata,
+                "metadata": prompt.meta,
                 "responses": [
                     {
                         "id": resp.id,
@@ -47,7 +47,7 @@ def export_conversation_to_json(
                         "content": resp.content,
                         "model_provider": resp.model_provider,
                         "model_name": resp.model_name,
-                        "metadata": resp.metadata,
+                        "metadata": resp.meta,
                     }
                     for resp in responses.get(prompt.id, [])
                 ]
@@ -126,7 +126,7 @@ def export_prompts_to_json(prompts: List[Prompt]) -> List[Dict[str, Any]]:
             "created_at": prompt.created_at.isoformat(),
             "content": prompt.content,
             "active_tools": prompt.active_tools,
-            "metadata": prompt.metadata,
+            "metadata": prompt.meta,
         }
         for prompt in prompts
     ]

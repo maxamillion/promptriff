@@ -20,7 +20,7 @@ By participating in this project, you agree to abide by our Code of Conduct:
    - Clear description of the problem
    - Steps to reproduce
    - Expected vs actual behavior
-   - System information (OS, Python version)
+   - System information (OS, Python version - must be 3.10+)
    - Relevant logs or error messages
 
 ### Suggesting Features
