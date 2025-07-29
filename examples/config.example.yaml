@@ -1,0 +1,88 @@
+# PromptRiff Configuration Example
+# Copy this file to ~/.config/promptriff/config.yaml and update with your settings
+
+# AI Model Provider Configurations
+models:
+  openai:
+    api_key: ${OPENAI_API_KEY}  # Can also be set directly: "sk-..."
+    endpoint: https://api.openai.com/v1
+    default_model: gpt-4
+    timeout: 30
+    max_retries: 3
+  
+  claude:
+    api_key: ${ANTHROPIC_API_KEY}
+    endpoint: https://api.anthropic.com/v1
+    default_model: claude-3-opus-20240229
+    timeout: 30
+    max_retries: 3
+  
+  gemini:
+    api_key: ${GOOGLE_API_KEY}
+    endpoint: https://generativelanguage.googleapis.com/v1
+    default_model: gemini-pro
+    timeout: 30
+    max_retries: 3
+
+# MCP Tool Configurations
+mcp_tools:
+  - name: filesystem
+    path: /usr/local/bin/mcp-filesystem
+    enabled: true
+    config:
+      allowed_directories:
+        - ~/projects
+        - /tmp
+  
+  - name: web_search
+    path: /usr/local/bin/mcp-websearch
+    enabled: true
+    config:
+      api_key: ${SEARCH_API_KEY}
+  
+  - name: calculator
+    path: /usr/local/bin/mcp-calculator
+    enabled: true
+    config: {}
+
+# UI Configuration
+ui:
+  theme: dark  # Options: dark, light
+  editor: ${EDITOR}  # External editor command (e.g., vim, nano, code)
+  diff_syntax_highlighting: true
+  max_response_lines: 1000
+  autosave_interval: 60  # seconds
+
+# Database Configuration
+database:
+  # path: ~/.local/share/promptriff/promptriff.db  # Default location
+  backup_on_startup: true
+  vacuum_on_startup: false
+
+# Debug mode
+debug: false
+
+# Environment Variable Reference:
+# 
+# Model API Keys:
+#   - PROMPTRIFF_OPENAI_API_KEY
+#   - PROMPTRIFF_CLAUDE_API_KEY
+#   - PROMPTRIFF_GEMINI_API_KEY
+#
+# Model Endpoints (optional):
+#   - PROMPTRIFF_OPENAI_ENDPOINT
+#   - PROMPTRIFF_CLAUDE_ENDPOINT
+#   - PROMPTRIFF_GEMINI_ENDPOINT
+#
+# Model Defaults (optional):
+#   - PROMPTRIFF_OPENAI_MODEL
+#   - PROMPTRIFF_CLAUDE_MODEL
+#   - PROMPTRIFF_GEMINI_MODEL
+#
+# Other:
+#   - PROMPTRIFF_CONFIG_DIR (default: ~/.config/promptriff)
+#   - PROMPTRIFF_DATA_DIR (default: ~/.local/share/promptriff)
+#   - PROMPTRIFF_CACHE_DIR (default: ~/.cache/promptriff)
+#   - PROMPTRIFF_THEME (UI theme)
+#   - PROMPTRIFF_DEBUG (true/false)
+#   - EDITOR (external editor)

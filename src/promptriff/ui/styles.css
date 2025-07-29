@@ -1,0 +1,227 @@
+/* PromptRiff Application Styles */
+
+/* Main container */
+#main-container {
+    height: 100%;
+}
+
+/* Tab content */
+TabbedContent {
+    height: 100%;
+}
+
+TabPane {
+    padding: 1;
+    height: 100%;
+}
+
+/* Chat interface */
+#chat-container {
+    height: 100%;
+}
+
+#message-area {
+    height: 1fr;
+    border: solid $primary;
+    margin-bottom: 1;
+}
+
+#message-list {
+    padding: 1;
+}
+
+.message-role {
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+.user-message {
+    background: $surface;
+    border: solid $primary;
+    margin: 1 0;
+    padding: 1;
+}
+
+.assistant-message {
+    background: $panel;
+    border: solid $secondary;
+    margin: 1 0;
+    padding: 1;
+}
+
+.system-message {
+    background: $surface-lighten-1;
+    border: solid $warning;
+    margin: 1 0;
+    padding: 1;
+}
+
+.streaming {
+    border-style: dashed;
+}
+
+/* Chat input */
+.chat-input-container {
+    height: 3;
+    margin-top: 1;
+}
+
+.chat-input-field {
+    width: 1fr;
+}
+
+#send-button {
+    width: 10;
+    margin-left: 1;
+}
+
+/* Model selector */
+.model-selector {
+    padding: 1;
+}
+
+.section-title {
+    text-style: bold;
+    margin-bottom: 1;
+}
+
+.field-label {
+    margin-top: 1;
+    margin-bottom: 1;
+}
+
+.provider-list {
+    height: 10;
+    margin-bottom: 1;
+}
+
+.model-list {
+    height: 15;
+}
+
+.status-indicator {
+    margin-top: 1;
+    padding: 1;
+}
+
+.status-indicator.success {
+    color: $success;
+}
+
+.status-indicator.error {
+    color: $error;
+}
+
+/* Tool selector */
+.tool-selector {
+    padding: 1;
+}
+
+.tool-list {
+    height: 1fr;
+    overflow-y: scroll;
+    border: solid $primary;
+    padding: 1;
+}
+
+.tool-item {
+    margin-bottom: 1;
+}
+
+.tool-checkbox {
+    width: 100%;
+}
+
+.tool-description {
+    margin-left: 2;
+    color: $text-muted;
+}
+
+.tool-actions {
+    margin-top: 1;
+    layout: horizontal;
+}
+
+.tool-actions Button {
+    margin-right: 1;
+}
+
+/* Diff viewer */
+.diff-viewer {
+    height: 100%;
+}
+
+.diff-header {
+    height: 3;
+    layout: horizontal;
+    border-bottom: solid $primary;
+}
+
+.diff-title {
+    width: 1fr;
+    content-align: center middle;
+}
+
+.diff-label-left {
+    text-style: bold;
+    color: $success;
+}
+
+.diff-label-right {
+    text-style: bold;
+    color: $warning;
+}
+
+.diff-stats {
+    width: 20;
+    content-align: right middle;
+    padding-right: 1;
+}
+
+.diff-content {
+    height: 1fr;
+    layout: horizontal;
+}
+
+.diff-pane {
+    width: 50%;
+    border: solid $primary;
+}
+
+.diff-pane-left {
+    border-right: none;
+}
+
+.diff-text {
+    padding: 1;
+}
+
+.diff-line {
+    white-space: pre;
+}
+
+.diff-add {
+    background: $success-darken-3;
+}
+
+.diff-delete {
+    background: $error-darken-3;
+}
+
+.diff-change {
+    background: $warning-darken-3;
+}
+
+.diff-empty {
+    color: $text-disabled;
+}
+
+/* Library table */
+DataTable {
+    height: 1fr;
+}
+
+/* General */
+LoadingIndicator {
+    color: $primary;
+}
